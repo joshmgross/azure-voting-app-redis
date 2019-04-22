@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: joshmgross-azurevotingappredis 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: joshmgross-azurevotingappredis 
+    spec:
+      containers:
+        - name: joshmgross-azurevotingappredis 
+          image: jogroskube.azurecr.io/joshmgross-azurevotingappredis 
+          ports:
+          - containerPort: 80
