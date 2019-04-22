@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: joshmgrossazurevotingappredis 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: joshmgrossazurevotingappredis 
+    spec:
+      containers:
+        - name: joshmgrossazurevotingappredis 
+          image: jogroskube.azurecr.io/joshmgrossazurevotingappredis 
+          ports:
+          - containerPort: 80
